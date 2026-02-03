@@ -1,3 +1,15 @@
+# Database Setup - Step by Step
+
+## Step 1: Open Supabase SQL Editor
+
+1. Go to: https://supabase.com/dashboard/project/cttoedvsuokbrgzooqrn/sql/new
+2. You should see a SQL editor interface
+
+## Step 2: Copy the Schema SQL
+
+The SQL schema is in `supabase/schema.sql`. Here's what you need to run:
+
+```sql
 -- Run Forest Run MVP schema
 
 create table if not exists public.profiles (
@@ -56,3 +68,37 @@ create index if not exists milestones_company_idx on public.milestones (company_
 create index if not exists tasks_milestone_idx on public.tasks (milestone_id);
 create index if not exists task_completions_task_idx on public.task_completions (task_id);
 create index if not exists kpis_company_idx on public.kpis (company_id);
+```
+
+## Step 3: Run the SQL
+
+1. **Copy the entire SQL above** (or from `supabase/schema.sql` file)
+2. **Paste it** into the Supabase SQL Editor
+3. **Click the "Run" button** (or press Cmd/Ctrl + Enter)
+4. You should see: **"Success. No rows returned"** ✅
+
+## Step 4: Verify Tables Were Created
+
+1. In Supabase Dashboard, go to **Table Editor** (left sidebar)
+2. You should see these tables:
+   - ✅ profiles
+   - ✅ companies
+   - ✅ milestones
+   - ✅ tasks
+   - ✅ task_completions
+   - ✅ kpis
+
+## Optional: Add Demo Data
+
+If you want to test with demo data:
+
+1. Go back to SQL Editor
+2. Open `supabase/seed.sql` in your project
+3. Copy and paste that SQL
+4. Click Run
+
+This will create a demo company with sample tasks and milestones.
+
+## ✅ Database Setup Complete!
+
+Once you see the tables in Table Editor, you're done with database setup!

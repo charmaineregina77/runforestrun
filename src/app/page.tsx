@@ -122,15 +122,27 @@ export default async function Home() {
           <p className="mt-3 text-base text-slate-600">
             Finish 4 more tasks to launch ads.
           </p>
+          <a
+            href="/success"
+            className="mt-4 inline-flex text-sm font-semibold text-slate-900 hover:text-slate-700"
+          >
+            View all scores →
+          </a>
         </div>
         <div className="glass rounded-3xl p-6">
           <p className="text-xs uppercase tracking-widest text-slate-500">
-            Ads Ready
+            Need Help?
           </p>
-          <h3 className="mt-3 text-2xl font-semibold">No campaigns yet</h3>
+          <h3 className="mt-3 text-2xl font-semibold">Find Experts</h3>
           <p className="mt-3 text-base text-slate-600">
-            Create your first two creatives to unlock launch.
+            Connect with designers, developers, marketers, and more.
           </p>
+          <a
+            href="/agents"
+            className="mt-4 inline-flex text-sm font-semibold text-slate-900 hover:text-slate-700"
+          >
+            Browse agents →
+          </a>
         </div>
         <div className="glass rounded-3xl p-6">
           <p className="text-xs uppercase tracking-widest text-slate-500">
@@ -140,6 +152,12 @@ export default async function Home() {
           <p className="mt-3 text-base text-slate-600">
             Connect Shopify to start tracking performance.
           </p>
+          <a
+            href="/kpis"
+            className="mt-4 inline-flex text-sm font-semibold text-slate-900 hover:text-slate-700"
+          >
+            View KPIs →
+          </a>
         </div>
       </section>
     </div>

@@ -54,11 +54,14 @@ export default function RootLayout({
               <Link className="hover:text-slate-900" href="/checklist">
                 Checklist
               </Link>
+              <Link className="hover:text-slate-900" href="/success">
+                Success
+              </Link>
+              <Link className="hover:text-slate-900" href="/agents">
+                Find Experts
+              </Link>
               <Link className="hover:text-slate-900" href="/kpis">
                 KPIs
-              </Link>
-              <Link className="hover:text-slate-900" href="/onboarding">
-                Onboarding
               </Link>
             </nav>
           </div>
