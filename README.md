@@ -1,8 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Run Forest Run MVP
 
 ## Getting Started
 
-First, run the development server:
+## Local setup
+
+1. Copy `.env.example` to `.env.local` and fill in keys.
+2. Run the development server:
 
 ```bash
 npm run dev
@@ -14,9 +17,11 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Supabase
+
+Use `supabase/schema.sql` to create the MVP tables in Supabase.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
