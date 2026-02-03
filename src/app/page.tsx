@@ -32,7 +32,7 @@ export default async function Home() {
 
   return (
     <div className="space-y-10">
-      <section className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="glass rounded-3xl p-8">
         <p className="text-xs uppercase tracking-widest text-slate-500">
           Founder Home
         </p>
@@ -53,10 +53,7 @@ export default async function Home() {
           </div>
           <div className="grid gap-4">
             {topActions.map((action) => (
-              <div
-                key={action.id}
-                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-              >
+              <div key={action.id} className="glass rounded-2xl p-5">
                 <div className="flex items-center justify-between text-sm text-slate-500">
                   <span>{action.role}</span>
                   <span>
@@ -78,7 +75,7 @@ export default async function Home() {
 
         <div className="space-y-4">
           <h2 className="text-lg font-semibold">Launch Progress</h2>
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="glass rounded-2xl p-5">
             <p className="text-sm text-slate-500">Current milestone</p>
             <h3 className="mt-2 text-xl font-semibold">Validate</h3>
             <p className="mt-2 text-sm text-slate-600">
@@ -89,7 +86,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="glass rounded-2xl p-5">
             <h3 className="text-sm font-semibold text-slate-700">
               Upcoming milestones
             </h3>
@@ -117,7 +114,7 @@ export default async function Home() {
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="glass rounded-2xl p-5">
           <p className="text-xs uppercase tracking-widest text-slate-500">
             Store Readiness
           </p>
@@ -126,7 +123,7 @@ export default async function Home() {
             Finish 4 more tasks to launch ads.
           </p>
         </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="glass rounded-2xl p-5">
           <p className="text-xs uppercase tracking-widest text-slate-500">
             Ads Ready
           </p>
@@ -135,7 +132,7 @@ export default async function Home() {
             Create your first two creatives to unlock launch.
           </p>
         </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="glass rounded-2xl p-5">
           <p className="text-xs uppercase tracking-widest text-slate-500">
             KPIs
           </p>

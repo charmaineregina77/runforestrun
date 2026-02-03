@@ -16,16 +16,13 @@ export default function ChecklistPage() {
 
       <div className="grid gap-6 lg:grid-cols-3">
         {readinessChecklist.map((group) => (
-          <div
-            key={group.title}
-            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-          >
+          <div key={group.title} className="glass rounded-2xl p-6">
             <h2 className="text-lg font-semibold">{group.title}</h2>
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
               {group.items.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3"
+                  className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white/70 px-4 py-3"
                 >
                   <span className="mt-1 h-2 w-2 rounded-full bg-slate-900" />
                   <span>{item}</span>

@@ -45,10 +45,7 @@ export default async function KpisPage() {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {kpis.map((kpi) => (
-          <div
-            key={kpi.label}
-            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-          >
+          <div key={kpi.label} className="glass rounded-2xl p-6">
             <p className="text-xs uppercase tracking-widest text-slate-500">
               {kpi.label}
             </p>

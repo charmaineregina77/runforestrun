@@ -43,7 +43,7 @@ export default function OnboardingPage() {
       </header>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div className="glass rounded-2xl p-6">
           <h2 className="text-lg font-semibold">Company profile</h2>
           <p className="mt-2 text-sm text-slate-600">
             Tell us what you sell so we can personalize your roadmap.
@@ -51,19 +51,19 @@ export default function OnboardingPage() {
           <form action={saveCompanyProfile} className="mt-4 space-y-3">
             <input
               name="brand_name"
-              className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+              className="w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900"
               placeholder="Brand name"
               required
             />
             <input
               name="product_category"
-              className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+              className="w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900"
               placeholder="Product category"
             />
             <input
               name="launch_target_date"
               type="date"
-              className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+              className="w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900"
             />
             <button className="w-full rounded-xl bg-slate-900 py-3 text-sm font-semibold text-white">
               Save profile
@@ -72,7 +72,7 @@ export default function OnboardingPage() {
         </div>
 
         <div className="space-y-4">
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="glass rounded-2xl p-6">
             <h2 className="text-lg font-semibold">Shopify</h2>
             <p className="mt-2 text-sm text-slate-600">
               Connect your store to track orders, products, and traffic.
@@ -81,7 +81,7 @@ export default function OnboardingPage() {
               Connect Shopify
             </button>
           </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="glass rounded-2xl p-6">
             <h2 className="text-lg font-semibold">Meta + Google Ads</h2>
             <p className="mt-2 text-sm text-slate-600">
               Pull spend and performance data to shape your action plan.

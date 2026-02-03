@@ -48,7 +48,7 @@ export default async function ActionDetailPage({
         <p className="mt-3 text-sm text-slate-600">{action.summary}</p>
       </header>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <section className="glass rounded-2xl p-6">
         <div className="flex flex-wrap gap-3 text-sm text-slate-600">
           <span className="rounded-full border border-slate-200 px-3 py-1">
             {action.role}
@@ -80,7 +80,7 @@ export default async function ActionDetailPage({
         <p className="mt-2 text-sm text-slate-600">
           Use this as your starting copy:
         </p>
-        <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
+        <div className="mt-4 rounded-xl border border-slate-200 bg-white/70 p-4 text-sm text-slate-700">
           Headline: “The simplest way to [solve core problem] without
           [biggest pain].”
           <br />

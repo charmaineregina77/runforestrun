@@ -39,10 +39,7 @@ export default async function RoadmapPage() {
 
       <div className="grid gap-6">
         {milestones.map((milestone) => (
-          <div
-            key={milestone.title}
-            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-          >
+          <div key={milestone.title} className="glass rounded-2xl p-6">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">{milestone.title}</h2>
               <span className="text-xs uppercase tracking-widest text-slate-500">
@@ -53,7 +50,7 @@ export default async function RoadmapPage() {
               {milestone.tasks.map((task) => (
                 <li
                   key={task}
-                  className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2"
+                  className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white/70 px-4 py-2"
                 >
                   <span className="h-2 w-2 rounded-full bg-slate-900" />
                   <span>{task}</span>
