@@ -35,62 +35,62 @@ export default function OnboardingPage() {
         <p className="text-xs uppercase tracking-widest text-slate-500">
           Onboarding
         </p>
-        <h1 className="mt-2 text-3xl font-semibold">Connect your store</h1>
-        <p className="mt-3 max-w-2xl text-sm text-slate-600">
+        <h1 className="mt-3 text-4xl font-semibold">Connect your store</h1>
+        <p className="mt-4 max-w-2xl text-base text-slate-600">
           Plug in Shopify and your ad platforms so Run Forest Run can generate
           your daily action plan.
         </p>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-2">
-        <div className="glass rounded-2xl p-6">
-          <h2 className="text-lg font-semibold">Company profile</h2>
-          <p className="mt-2 text-sm text-slate-600">
+      <div className="grid gap-8 lg:grid-cols-2">
+        <div className="glass rounded-3xl p-8">
+          <h2 className="text-xl font-semibold">Company profile</h2>
+          <p className="mt-3 text-base text-slate-600">
             Tell us what you sell so we can personalize your roadmap.
           </p>
-          <form action={saveCompanyProfile} className="mt-4 space-y-3">
+          <form action={saveCompanyProfile} className="mt-5 space-y-4">
             <input
               name="brand_name"
-              className="w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900"
+              className="w-full rounded-2xl border border-slate-200/70 bg-white/80 px-4 py-3 text-base text-slate-900"
               placeholder="Brand name"
               required
             />
             <input
               name="product_category"
-              className="w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900"
+              className="w-full rounded-2xl border border-slate-200/70 bg-white/80 px-4 py-3 text-base text-slate-900"
               placeholder="Product category"
             />
             <input
               name="launch_target_date"
               type="date"
-              className="w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900"
+              className="w-full rounded-2xl border border-slate-200/70 bg-white/80 px-4 py-3 text-base text-slate-900"
             />
-            <button className="w-full rounded-xl bg-slate-900 py-3 text-sm font-semibold text-white">
+            <button className="w-full rounded-2xl bg-slate-900 py-3 text-base font-semibold text-white">
               Save profile
             </button>
           </form>
         </div>
 
-        <div className="space-y-4">
-          <div className="glass rounded-2xl p-6">
-            <h2 className="text-lg font-semibold">Shopify</h2>
-            <p className="mt-2 text-sm text-slate-600">
+        <div className="space-y-5">
+          <div className="glass rounded-3xl p-7">
+            <h2 className="text-xl font-semibold">Shopify</h2>
+            <p className="mt-3 text-base text-slate-600">
               Connect your store to track orders, products, and traffic.
             </p>
-            <button className="mt-4 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm font-semibold text-slate-700">
+            <button className="mt-5 w-full rounded-2xl border border-slate-300 px-4 py-3 text-base font-semibold text-slate-700">
               Connect Shopify
             </button>
           </div>
-          <div className="glass rounded-2xl p-6">
-            <h2 className="text-lg font-semibold">Meta + Google Ads</h2>
-            <p className="mt-2 text-sm text-slate-600">
+          <div className="glass rounded-3xl p-7">
+            <h2 className="text-xl font-semibold">Meta + Google Ads</h2>
+            <p className="mt-3 text-base text-slate-600">
               Pull spend and performance data to shape your action plan.
             </p>
-            <div className="mt-4 grid gap-3 md:grid-cols-2">
-              <button className="rounded-xl border border-slate-300 px-4 py-3 text-sm font-semibold text-slate-700">
+            <div className="mt-5 grid gap-3 md:grid-cols-2">
+              <button className="rounded-2xl border border-slate-300 px-4 py-3 text-base font-semibold text-slate-700">
                 Connect Meta
               </button>
-              <button className="rounded-xl border border-slate-300 px-4 py-3 text-sm font-semibold text-slate-700">
+              <button className="rounded-2xl border border-slate-300 px-4 py-3 text-base font-semibold text-slate-700">
                 Connect Google
               </button>
             </div>

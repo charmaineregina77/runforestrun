@@ -36,21 +36,21 @@ export default async function KpisPage() {
         <p className="text-xs uppercase tracking-widest text-slate-500">
           KPI Health
         </p>
-        <h1 className="mt-2 text-3xl font-semibold">Your launch metrics</h1>
-        <p className="mt-3 max-w-2xl text-sm text-slate-600">
+        <h1 className="mt-3 text-4xl font-semibold">Your launch metrics</h1>
+        <p className="mt-4 max-w-2xl text-base text-slate-600">
           Once Shopify and Ads data are connected, these metrics will update in
           real-time.
         </p>
       </header>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {kpis.map((kpi) => (
-          <div key={kpi.label} className="glass rounded-2xl p-6">
+          <div key={kpi.label} className="glass rounded-3xl p-7">
             <p className="text-xs uppercase tracking-widest text-slate-500">
               {kpi.label}
             </p>
-            <h2 className="mt-3 text-2xl font-semibold">{kpi.value}</h2>
-            <p className={`mt-2 text-sm ${statusColor[kpi.status]}`}>
+            <h2 className="mt-4 text-3xl font-semibold">{kpi.value}</h2>
+            <p className={`mt-3 text-base ${statusColor[kpi.status]}`}>
               {kpi.status} · {kpi.hint}
             </p>
           </div>

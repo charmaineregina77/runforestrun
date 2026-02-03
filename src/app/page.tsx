@@ -31,39 +31,39 @@ export default async function Home() {
   }
 
   return (
-    <div className="space-y-10">
-      <section className="glass rounded-3xl p-8">
+    <div className="space-y-12">
+      <section className="glass rounded-[32px] p-10">
         <p className="text-xs uppercase tracking-widest text-slate-500">
           Founder Home
         </p>
-        <h1 className="mt-3 text-3xl font-semibold">
+        <h1 className="mt-4 text-4xl font-semibold">
           Your next 3 actions to reach first sales
         </h1>
-        <p className="mt-3 max-w-2xl text-sm text-slate-600">
+        <p className="mt-4 max-w-2xl text-base text-slate-600">
           Run Forest Run turns your launch into a daily plan. Focus on the
           highest-impact work without guessing.
         </p>
       </section>
 
-      <section className="grid gap-6 lg:grid-cols-[2fr,1fr]">
+      <section className="grid gap-8 lg:grid-cols-[2fr,1fr]">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold">Top 3 Actions</h2>
+            <h2 className="text-xl font-semibold">Top 3 Actions</h2>
             <span className="text-xs text-slate-500">Updated today</span>
           </div>
-          <div className="grid gap-4">
+          <div className="grid gap-5">
             {topActions.map((action) => (
-              <div key={action.id} className="glass rounded-2xl p-5">
+              <div key={action.id} className="glass rounded-3xl p-6">
                 <div className="flex items-center justify-between text-sm text-slate-500">
                   <span>{action.role}</span>
                   <span>
                     Impact: {action.impact} · Effort: {action.effort}
                   </span>
                 </div>
-                <h3 className="mt-2 text-lg font-semibold">{action.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{action.summary}</p>
+                <h3 className="mt-3 text-xl font-semibold">{action.title}</h3>
+                <p className="mt-3 text-base text-slate-600">{action.summary}</p>
                 <Link
-                  className="mt-4 inline-flex text-sm font-semibold text-slate-900 hover:text-slate-700"
+                  className="mt-5 inline-flex text-sm font-semibold text-slate-900 hover:text-slate-700"
                   href={`/actions/${action.id}`}
                 >
                   Open action →
@@ -74,23 +74,23 @@ export default async function Home() {
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold">Launch Progress</h2>
-          <div className="glass rounded-2xl p-5">
+          <h2 className="text-xl font-semibold">Launch Progress</h2>
+          <div className="glass rounded-3xl p-6">
             <p className="text-sm text-slate-500">Current milestone</p>
-            <h3 className="mt-2 text-xl font-semibold">Validate</h3>
-            <p className="mt-2 text-sm text-slate-600">
+            <h3 className="mt-3 text-2xl font-semibold">Validate</h3>
+            <p className="mt-3 text-base text-slate-600">
               2 of 5 tasks complete. Keep momentum to unlock Build.
             </p>
-            <div className="mt-4 h-2 w-full rounded-full bg-slate-100">
-              <div className="h-2 w-2/5 rounded-full bg-slate-900" />
+            <div className="mt-5 h-2.5 w-full rounded-full bg-slate-100">
+              <div className="h-2.5 w-2/5 rounded-full bg-slate-900" />
             </div>
           </div>
 
-          <div className="glass rounded-2xl p-5">
+          <div className="glass rounded-3xl p-6">
             <h3 className="text-sm font-semibold text-slate-700">
               Upcoming milestones
             </h3>
-            <ul className="mt-3 space-y-2 text-sm text-slate-600">
+            <ul className="mt-4 space-y-3 text-sm text-slate-600">
               {roadmapMilestones.slice(1).map((milestone) => (
                 <li
                   key={milestone.title}
@@ -104,7 +104,7 @@ export default async function Home() {
               ))}
             </ul>
             <Link
-              className="mt-4 inline-flex text-sm font-semibold text-slate-900 hover:text-slate-700"
+              className="mt-5 inline-flex text-sm font-semibold text-slate-900 hover:text-slate-700"
               href="/roadmap"
             >
               View roadmap →
@@ -113,31 +113,31 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-3">
-        <div className="glass rounded-2xl p-5">
+      <section className="grid gap-6 md:grid-cols-3">
+        <div className="glass rounded-3xl p-6">
           <p className="text-xs uppercase tracking-widest text-slate-500">
             Store Readiness
           </p>
-          <h3 className="mt-2 text-xl font-semibold">70% complete</h3>
-          <p className="mt-2 text-sm text-slate-600">
+          <h3 className="mt-3 text-2xl font-semibold">70% complete</h3>
+          <p className="mt-3 text-base text-slate-600">
             Finish 4 more tasks to launch ads.
           </p>
         </div>
-        <div className="glass rounded-2xl p-5">
+        <div className="glass rounded-3xl p-6">
           <p className="text-xs uppercase tracking-widest text-slate-500">
             Ads Ready
           </p>
-          <h3 className="mt-2 text-xl font-semibold">No campaigns yet</h3>
-          <p className="mt-2 text-sm text-slate-600">
+          <h3 className="mt-3 text-2xl font-semibold">No campaigns yet</h3>
+          <p className="mt-3 text-base text-slate-600">
             Create your first two creatives to unlock launch.
           </p>
         </div>
-        <div className="glass rounded-2xl p-5">
+        <div className="glass rounded-3xl p-6">
           <p className="text-xs uppercase tracking-widest text-slate-500">
             KPIs
           </p>
-          <h3 className="mt-2 text-xl font-semibold">Waiting on data</h3>
-          <p className="mt-2 text-sm text-slate-600">
+          <h3 className="mt-3 text-2xl font-semibold">Waiting on data</h3>
+          <p className="mt-3 text-base text-slate-600">
             Connect Shopify to start tracking performance.
           </p>
         </div>
