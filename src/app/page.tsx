@@ -1,7 +1,35 @@
 import Link from "next/link";
-import { roadmapMilestones, topActions } from "@/lib/mock-data";
+import { roadmapMilestones, topActions as mockActions } from "@/lib/mock-data";
+import { getCompanyProfile } from "@/lib/data/company";
+import { getTopActions } from "@/lib/data/actions";
+import { getDemoOwnerId } from "@/lib/demo";
 
-export default function Home() {
+export default async function Home() {
+  const demoOwnerId = getDemoOwnerId();
+  let topActions = mockActions;
+
+  if (demoOwnerId) {
+    try {
+      const company = await getCompanyProfile(demoOwnerId);
+      const data = await getTopActions(company.id);
+      if (data.length) {
+        topActions = data.map((action) => ({
+          id: action.id,
+          title: action.title,
+          role: action.role ?? "Growth",
+          impact: (action.impact ?? "Medium") as "High" | "Medium" | "Low",
+          effort: (action.effort ?? "Low") as "High" | "Medium" | "Low",
+          summary:
+            action.description ??
+            "Complete this action to move your launch forward.",
+          checklist: [],
+        }));
+      }
+    } catch (error) {
+      console.error("Failed to load top actions", error);
+    }
+  }
+
   return (
     <div className="space-y-10">
       <section className="rounded-3xl border border-white/10 bg-gradient-to-br from-emerald-500/10 via-slate-900 to-slate-950 p-8">
