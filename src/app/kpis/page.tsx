@@ -1,4 +1,7 @@
-import { kpis } from "@/lib/mock-data";
+import { kpis as mockKpis } from "@/lib/mock-data";
+import { getCompanyProfile } from "@/lib/data/company";
+import { getKpis } from "@/lib/data/kpis";
+import { getDemoOwnerId } from "@/lib/demo";
 
 const statusColor: Record<string, string> = {
   Red: "text-red-300",
@@ -6,7 +9,27 @@ const statusColor: Record<string, string> = {
   Green: "text-emerald-300",
 };
 
-export default function KpisPage() {
+export default async function KpisPage() {
+  const demoOwnerId = getDemoOwnerId();
+  let kpis = mockKpis;
+
+  if (demoOwnerId) {
+    try {
+      const company = await getCompanyProfile(demoOwnerId);
+      const data = await getKpis(company.id);
+      if (data.length) {
+        kpis = data.map((kpi) => ({
+          label: kpi.label,
+          value: kpi.value,
+          status: kpi.status,
+          hint: kpi.hint ?? "",
+        }));
+      }
+    } catch (error) {
+      console.error("Failed to load KPI data", error);
+    }
+  }
+
   return (
     <div className="space-y-8">
       <header>

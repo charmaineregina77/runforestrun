@@ -1,3 +1,33 @@
+import { redirect } from "next/navigation";
+import { upsertCompanyProfile } from "@/lib/data/company";
+import { getDemoOwnerId } from "@/lib/demo";
+
+async function saveCompanyProfile(formData: FormData) {
+  "use server";
+
+  const demoOwnerId = getDemoOwnerId();
+
+  if (!demoOwnerId) {
+    throw new Error("Missing DEMO_OWNER_ID.");
+  }
+
+  const name = String(formData.get("brand_name") ?? "").trim();
+  const productCategory = String(formData.get("product_category") ?? "").trim();
+  const launchTargetDate = String(formData.get("launch_target_date") ?? "").trim();
+
+  if (!name) {
+    throw new Error("Brand name is required.");
+  }
+
+  await upsertCompanyProfile(demoOwnerId, {
+    name,
+    product_category: productCategory || null,
+    launch_target_date: launchTargetDate || null,
+  });
+
+  redirect("/");
+}
+
 export default function OnboardingPage() {
   return (
     <div className="space-y-8">
@@ -18,23 +48,27 @@ export default function OnboardingPage() {
           <p className="mt-2 text-sm text-slate-300">
             Tell us what you sell so we can personalize your roadmap.
           </p>
-          <div className="mt-4 space-y-3">
+          <form action={saveCompanyProfile} className="mt-4 space-y-3">
             <input
+              name="brand_name"
               className="w-full rounded-xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-200"
               placeholder="Brand name"
+              required
             />
             <input
+              name="product_category"
               className="w-full rounded-xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-200"
               placeholder="Product category"
             />
             <input
+              name="launch_target_date"
+              type="date"
               className="w-full rounded-xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-200"
-              placeholder="Launch date target"
             />
             <button className="w-full rounded-xl bg-emerald-400 py-3 text-sm font-semibold text-slate-950">
               Save profile
             </button>
-          </div>
+          </form>
         </div>
 
         <div className="space-y-4">

@@ -1,6 +1,29 @@
 import { roadmapMilestones } from "@/lib/mock-data";
+import { getCompanyProfile } from "@/lib/data/company";
+import { getRoadmap } from "@/lib/data/roadmap";
+import { getDemoOwnerId } from "@/lib/demo";
 
-export default function RoadmapPage() {
+export default async function RoadmapPage() {
+  const demoOwnerId = getDemoOwnerId();
+
+  let milestones = roadmapMilestones;
+
+  if (demoOwnerId) {
+    try {
+      const company = await getCompanyProfile(demoOwnerId);
+      const data = await getRoadmap(company.id);
+      if (data.length) {
+        milestones = data.map((item) => ({
+          title: item.title,
+          status: item.status,
+          tasks: item.tasks.map((task) => task.title),
+        }));
+      }
+    } catch (error) {
+      console.error("Failed to load roadmap data", error);
+    }
+  }
+
   return (
     <div className="space-y-8">
       <header>
@@ -15,7 +38,7 @@ export default function RoadmapPage() {
       </header>
 
       <div className="grid gap-6">
-        {roadmapMilestones.map((milestone) => (
+        {milestones.map((milestone) => (
           <div
             key={milestone.title}
             className="rounded-2xl border border-white/10 bg-slate-900/60 p-6"

@@ -23,6 +23,9 @@ bun dev
 
 Use `supabase/schema.sql` to create the MVP tables in Supabase.
 
+Optionally run `supabase/seed.sql` for demo data, then set
+`DEMO_OWNER_ID=11111111-1111-1111-1111-111111111111` in `.env.local`.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
