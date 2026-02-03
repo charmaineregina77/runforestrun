@@ -4,9 +4,9 @@ import { getKpis } from "@/lib/data/kpis";
 import { getDemoOwnerId } from "@/lib/demo";
 
 const statusColor: Record<string, string> = {
-  Red: "text-red-300",
-  Yellow: "text-yellow-300",
-  Green: "text-emerald-300",
+  Red: "text-red-600",
+  Yellow: "text-amber-600",
+  Green: "text-emerald-600",
 };
 
 export default async function KpisPage() {
@@ -33,11 +33,11 @@ export default async function KpisPage() {
   return (
     <div className="space-y-8">
       <header>
-        <p className="text-xs uppercase tracking-widest text-emerald-300">
+        <p className="text-xs uppercase tracking-widest text-slate-500">
           KPI Health
         </p>
         <h1 className="mt-2 text-3xl font-semibold">Your launch metrics</h1>
-        <p className="mt-3 max-w-2xl text-sm text-slate-300">
+        <p className="mt-3 max-w-2xl text-sm text-slate-600">
           Once Shopify and Ads data are connected, these metrics will update in
           real-time.
         </p>
@@ -47,9 +47,9 @@ export default async function KpisPage() {
         {kpis.map((kpi) => (
           <div
             key={kpi.label}
-            className="rounded-2xl border border-white/10 bg-slate-900/60 p-6"
+            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
           >
-            <p className="text-xs uppercase tracking-widest text-slate-400">
+            <p className="text-xs uppercase tracking-widest text-slate-500">
               {kpi.label}
             </p>
             <h2 className="mt-3 text-2xl font-semibold">{kpi.value}</h2>

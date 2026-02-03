@@ -27,37 +27,37 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-slate-950 text-slate-100 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white text-slate-900 antialiased`}
       >
-        <header className="border-b border-white/10 bg-slate-950/80 backdrop-blur">
+        <header className="border-b border-slate-200 bg-white">
           <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-400 text-slate-950 font-bold">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-white font-bold">
                 RF
               </div>
               <div>
-                <p className="text-sm uppercase tracking-widest text-emerald-300">
+                <p className="text-sm uppercase tracking-widest text-slate-900">
                   Run Forest Run
                 </p>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-slate-500">
                   Founder Operating System
                 </p>
               </div>
             </div>
-            <nav className="flex flex-wrap gap-4 text-sm text-slate-300">
-              <Link className="hover:text-white" href="/">
+            <nav className="flex flex-wrap gap-4 text-sm text-slate-600">
+              <Link className="hover:text-slate-900" href="/">
                 Home
               </Link>
-              <Link className="hover:text-white" href="/roadmap">
+              <Link className="hover:text-slate-900" href="/roadmap">
                 Roadmap
               </Link>
-              <Link className="hover:text-white" href="/checklist">
+              <Link className="hover:text-slate-900" href="/checklist">
                 Checklist
               </Link>
-              <Link className="hover:text-white" href="/kpis">
+              <Link className="hover:text-slate-900" href="/kpis">
                 KPIs
               </Link>
-              <Link className="hover:text-white" href="/onboarding">
+              <Link className="hover:text-slate-900" href="/onboarding">
                 Onboarding
               </Link>
             </nav>
